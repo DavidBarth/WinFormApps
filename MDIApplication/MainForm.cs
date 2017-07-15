@@ -12,6 +12,8 @@ namespace MDIApplication
 {
     public partial class MainForm : Form
     {
+        private int counter = 0; 
+
         public MainForm()
         {
             InitializeComponent();
@@ -21,7 +23,9 @@ namespace MDIApplication
         {
             ChildForm childForm = new ChildForm();
             childForm.MdiParent = this;
+            counter += 1;
             childForm.Show();
+            childForm.Text = "New Document " + counter; 
 
         }
 
