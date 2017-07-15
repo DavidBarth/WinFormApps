@@ -1,0 +1,5 @@
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\bin\Debug\MDIApplication.exe.config
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIApplication.csprojResolveAssemblyReference.cache
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIApplication.MainForm.resources
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIApplication.Properties.Resources.resources
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIApplication.csproj.GenerateResource.Cache
