@@ -40,6 +40,60 @@ namespace MDIApplication
             this.LayoutMdi(MdiLayout.TileVertical);
         }
 
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                var childForm = (ChildForm)this.ActiveMdiChild;
+                childForm.DocumentTextBox.Undo();
+            }
+        }
+
+        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                var childForm = (ChildForm)this.ActiveMdiChild;
+                childForm.DocumentTextBox.Redo();
+            }
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                var childForm = (ChildForm)this.ActiveMdiChild;
+                childForm.DocumentTextBox.Cut();
+            }
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                var childForm = (ChildForm)this.ActiveMdiChild;
+                childForm.DocumentTextBox.Copy();
+            }
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                var childForm = (ChildForm)this.ActiveMdiChild;
+                childForm.DocumentTextBox.Paste();
+            }
+        }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                var childForm = (ChildForm)this.ActiveMdiChild;
+                childForm.DocumentTextBox.SelectAll();
+            }
+        }
+
        
 
         

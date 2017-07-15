@@ -54,6 +54,6 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox DocumentTextBox;
+        internal System.Windows.Forms.RichTextBox DocumentTextBox;
     }
 }
