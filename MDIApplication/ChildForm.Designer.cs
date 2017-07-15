@@ -28,11 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.DocumentTextBox = new System.Windows.Forms.RichTextBox();
+            this.SuspendLayout();
+            // 
+            // DocumentTextBox
+            // 
+            this.DocumentTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentTextBox.Location = new System.Drawing.Point(0, 0);
+            this.DocumentTextBox.Name = "DocumentTextBox";
+            this.DocumentTextBox.Size = new System.Drawing.Size(284, 262);
+            this.DocumentTextBox.TabIndex = 0;
+            this.DocumentTextBox.Text = "";
+            // 
+            // ChildForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "ChildForm";
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.DocumentTextBox);
+            this.Name = "ChildForm";
+            this.Text = "New Document";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.RichTextBox DocumentTextBox;
     }
 }

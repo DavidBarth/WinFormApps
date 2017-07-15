@@ -3,3 +3,8 @@ C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIA
 C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIApplication.MainForm.resources
 C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIApplication.Properties.Resources.resources
 C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIApplication.csproj.GenerateResource.Cache
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\bin\Debug\MDIApplication.exe
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\bin\Debug\MDIApplication.pdb
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIApplication.ChildForm.resources
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIApplication.exe
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\MDIApplication\obj\Debug\MDIApplication.pdb

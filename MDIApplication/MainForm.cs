@@ -17,6 +17,14 @@ namespace MDIApplication
             InitializeComponent();
         }
 
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChildForm childForm = new ChildForm();
+            childForm.MdiParent = this;
+            childForm.Show();
+
+        }
+
         
     }
 }
