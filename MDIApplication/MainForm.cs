@@ -98,8 +98,44 @@ namespace MDIApplication
             }
         }
 
-       
+        private void CloseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
+        }
 
-        
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                var childForm = (ChildForm)this.ActiveMdiChild;
+
+                var dialog = new SaveFileDialog();
+                //configure
+                dialog.Filter = "Rich text files |*.rtf";
+                dialog.AddExtension = true;
+
+                var dialogResult = dialog.ShowDialog();
+
+                if (dialogResult == DialogResult.OK){
+
+                    childForm.DocumentTextBox.SaveFile(dialog.FileName);
+                    childForm.Text = dialog.FileName;
+                }
+            }
+        }
     }
 }
+
