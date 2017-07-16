@@ -113,6 +113,17 @@ namespace MDIApplication
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var dialog = new OpenFileDialog();
+            dialog.Filter = "Rich text files |*.rtf";
+
+            var dialogResult = dialog.ShowDialog();
+            if(dialogResult == DialogResult.OK)
+            {
+                var childForm = new ChildForm();
+                childForm.DocumentTextBox.LoadFile(dialog.FileName);
+                childForm.Text = dialog.FileName;
+                childForm.Show();    
+            }
 
         }
 
