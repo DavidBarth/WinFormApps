@@ -33,7 +33,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.DataGridView = new System.Windows.Forms.DataGridView();
+            this.CategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +61,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.CategoriesComboBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -87,6 +90,15 @@
             this.DataGridView.Size = new System.Drawing.Size(628, 321);
             this.DataGridView.TabIndex = 0;
             // 
+            // CategoriesComboBox
+            // 
+            this.CategoriesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CategoriesComboBox.FormattingEnabled = true;
+            this.CategoriesComboBox.Location = new System.Drawing.Point(8, 6);
+            this.CategoriesComboBox.Name = "CategoriesComboBox";
+            this.CategoriesComboBox.Size = new System.Drawing.Size(214, 21);
+            this.CategoriesComboBox.TabIndex = 0;
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +109,7 @@
             this.Name = "StartForm";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -111,6 +124,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView DataGridView;
+        private System.Windows.Forms.ComboBox CategoriesComboBox;
     }
 }
 

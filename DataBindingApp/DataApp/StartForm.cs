@@ -12,9 +12,16 @@ namespace DataApp
 {
     public partial class StartForm : Form
     {
+        private ObjectSource _objectSource = new ObjectSource();
+
         public StartForm()
         {
             InitializeComponent();
+
+            CategoriesComboBox.DataSource = _objectSource.GetCategories();
+            CategoriesComboBox.DisplayMember = "CategoryName";
         }
+
+       
     }
 }
