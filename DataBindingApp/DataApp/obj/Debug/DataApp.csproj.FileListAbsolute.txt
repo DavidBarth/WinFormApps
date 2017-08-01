@@ -1,1 +1,9 @@
 C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\bin\Debug\DataApp.exe.config
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\obj\Debug\DataApp.csprojResolveAssemblyReference.cache
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\obj\Debug\DataApp.StartForm.resources
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\obj\Debug\DataApp.Properties.Resources.resources
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\obj\Debug\DataApp.csproj.GenerateResource.Cache
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\bin\Debug\DataApp.exe
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\bin\Debug\DataApp.pdb
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\obj\Debug\DataApp.exe
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\obj\Debug\DataApp.pdb
