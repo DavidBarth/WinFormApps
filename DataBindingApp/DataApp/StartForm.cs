@@ -18,9 +18,19 @@ namespace DataApp
         {
             InitializeComponent();
 
-            CategoriesComboBox.DataSource = _objectSource.GetCategories();
             CategoriesComboBox.DisplayMember = "CategoryName";
+            CategoriesComboBox.ValueMember = "CategoryID"; //gives back the id of the currently selected item
+            CategoriesComboBox.DataSource = _objectSource.GetCategories();
         }
+
+        private void CategoriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int categoryId = Convert.ToInt16( CategoriesComboBox.SelectedValue); // value of CategoryID
+            ProductsListBox.DataSource = _objectSource.GetProducts(categoryId);
+            ProductsListBox.DisplayMember = "ProductName";
+        }
+
+       
 
        
     }

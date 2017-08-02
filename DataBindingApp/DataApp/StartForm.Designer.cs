@@ -31,9 +31,10 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ProductsListBox = new System.Windows.Forms.ListBox();
+            this.CategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.DataGridView = new System.Windows.Forms.DataGridView();
-            this.CategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.ProductsListBox);
             this.tabPage1.Controls.Add(this.CategoriesComboBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -69,6 +71,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Form";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ProductsListBox
+            // 
+            this.ProductsListBox.FormattingEnabled = true;
+            this.ProductsListBox.Location = new System.Drawing.Point(9, 34);
+            this.ProductsListBox.Name = "ProductsListBox";
+            this.ProductsListBox.Size = new System.Drawing.Size(213, 225);
+            this.ProductsListBox.TabIndex = 1;
+            // 
+            // CategoriesComboBox
+            // 
+            this.CategoriesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CategoriesComboBox.FormattingEnabled = true;
+            this.CategoriesComboBox.Location = new System.Drawing.Point(8, 6);
+            this.CategoriesComboBox.Name = "CategoriesComboBox";
+            this.CategoriesComboBox.Size = new System.Drawing.Size(214, 21);
+            this.CategoriesComboBox.TabIndex = 0;
+            this.CategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoriesComboBox_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -89,15 +109,6 @@
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.Size = new System.Drawing.Size(628, 321);
             this.DataGridView.TabIndex = 0;
-            // 
-            // CategoriesComboBox
-            // 
-            this.CategoriesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CategoriesComboBox.FormattingEnabled = true;
-            this.CategoriesComboBox.Location = new System.Drawing.Point(8, 6);
-            this.CategoriesComboBox.Name = "CategoriesComboBox";
-            this.CategoriesComboBox.Size = new System.Drawing.Size(214, 21);
-            this.CategoriesComboBox.TabIndex = 0;
             // 
             // StartForm
             // 
@@ -125,6 +136,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.ComboBox CategoriesComboBox;
+        private System.Windows.Forms.ListBox ProductsListBox;
     }
 }
 
