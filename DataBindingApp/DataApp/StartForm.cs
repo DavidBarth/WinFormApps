@@ -36,7 +36,13 @@ namespace DataApp
             PriceTextBox.DataBindings.Add("Text", products, "UnitPrice");
             StockTextBox.DataBindings.Clear();
             StockTextBox.DataBindings.Add("Text", products, "UnitsInStock");
-
+            QuantityTextBox.DataBindings.Clear();
+            QuantityTextBox.DataBindings.Add("Text", products, "QuantityPerUnit");
+            OrderTextBox.DataBindings.Clear();
+            OrderTextBox.DataBindings.Add("Text", products, "UnitsOnOrder");
+            DiscontinuedCheckBox.DataBindings.Clear();
+            DiscontinuedCheckBox.DataBindings.Add("Checked", products, "Discontinued");
+            
 
         }
     }

@@ -31,13 +31,22 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DiscontinuedCheckBox = new System.Windows.Forms.CheckBox();
+            this.OrderTextBox = new System.Windows.Forms.TextBox();
+            this.QuantityTextBox = new System.Windows.Forms.TextBox();
+            this.StockTextBox = new System.Windows.Forms.TextBox();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
             this.ProductsListBox = new System.Windows.Forms.ListBox();
             this.CategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.DataGridView = new System.Windows.Forms.DataGridView();
-            this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.PriceTextBox = new System.Windows.Forms.TextBox();
-            this.StockTextBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -65,6 +74,15 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.DiscontinuedCheckBox);
+            this.tabPage1.Controls.Add(this.OrderTextBox);
+            this.tabPage1.Controls.Add(this.QuantityTextBox);
             this.tabPage1.Controls.Add(this.StockTextBox);
             this.tabPage1.Controls.Add(this.PriceTextBox);
             this.tabPage1.Controls.Add(this.NameTextBox);
@@ -78,6 +96,104 @@
             this.tabPage1.Text = "Form";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(284, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Discontinued";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(284, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Order";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(284, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Quantity";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(284, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Stock";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(284, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Price";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(284, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Name";
+            // 
+            // DiscontinuedCheckBox
+            // 
+            this.DiscontinuedCheckBox.AutoSize = true;
+            this.DiscontinuedCheckBox.Location = new System.Drawing.Point(413, 141);
+            this.DiscontinuedCheckBox.Name = "DiscontinuedCheckBox";
+            this.DiscontinuedCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.DiscontinuedCheckBox.TabIndex = 8;
+            this.DiscontinuedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // OrderTextBox
+            // 
+            this.OrderTextBox.Location = new System.Drawing.Point(413, 115);
+            this.OrderTextBox.Name = "OrderTextBox";
+            this.OrderTextBox.Size = new System.Drawing.Size(192, 20);
+            this.OrderTextBox.TabIndex = 6;
+            // 
+            // QuantityTextBox
+            // 
+            this.QuantityTextBox.Location = new System.Drawing.Point(413, 88);
+            this.QuantityTextBox.Name = "QuantityTextBox";
+            this.QuantityTextBox.Size = new System.Drawing.Size(192, 20);
+            this.QuantityTextBox.TabIndex = 5;
+            // 
+            // StockTextBox
+            // 
+            this.StockTextBox.Location = new System.Drawing.Point(413, 62);
+            this.StockTextBox.Name = "StockTextBox";
+            this.StockTextBox.Size = new System.Drawing.Size(192, 20);
+            this.StockTextBox.TabIndex = 4;
+            // 
+            // PriceTextBox
+            // 
+            this.PriceTextBox.Location = new System.Drawing.Point(413, 36);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(192, 20);
+            this.PriceTextBox.TabIndex = 3;
+            // 
+            // NameTextBox
+            // 
+            this.NameTextBox.Location = new System.Drawing.Point(413, 9);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(192, 20);
+            this.NameTextBox.TabIndex = 2;
+            // 
             // ProductsListBox
             // 
             this.ProductsListBox.FormattingEnabled = true;
@@ -90,7 +206,7 @@
             // 
             this.CategoriesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoriesComboBox.FormattingEnabled = true;
-            this.CategoriesComboBox.Location = new System.Drawing.Point(8, 6);
+            this.CategoriesComboBox.Location = new System.Drawing.Point(9, 7);
             this.CategoriesComboBox.Name = "CategoriesComboBox";
             this.CategoriesComboBox.Size = new System.Drawing.Size(214, 21);
             this.CategoriesComboBox.TabIndex = 0;
@@ -115,27 +231,6 @@
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.Size = new System.Drawing.Size(628, 321);
             this.DataGridView.TabIndex = 0;
-            // 
-            // NameTextBox
-            // 
-            this.NameTextBox.Location = new System.Drawing.Point(268, 34);
-            this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(192, 20);
-            this.NameTextBox.TabIndex = 2;
-            // 
-            // PriceTextBox
-            // 
-            this.PriceTextBox.Location = new System.Drawing.Point(268, 61);
-            this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(192, 20);
-            this.PriceTextBox.TabIndex = 3;
-            // 
-            // StockTextBox
-            // 
-            this.StockTextBox.Location = new System.Drawing.Point(268, 87);
-            this.StockTextBox.Name = "StockTextBox";
-            this.StockTextBox.Size = new System.Drawing.Size(192, 20);
-            this.StockTextBox.TabIndex = 4;
             // 
             // StartForm
             // 
@@ -168,6 +263,15 @@
         private System.Windows.Forms.TextBox StockTextBox;
         private System.Windows.Forms.TextBox PriceTextBox;
         private System.Windows.Forms.TextBox NameTextBox;
+        private System.Windows.Forms.CheckBox DiscontinuedCheckBox;
+        private System.Windows.Forms.TextBox OrderTextBox;
+        private System.Windows.Forms.TextBox QuantityTextBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
