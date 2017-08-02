@@ -35,6 +35,9 @@
             this.CategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.DataGridView = new System.Windows.Forms.DataGridView();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
+            this.StockTextBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -62,6 +65,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.StockTextBox);
+            this.tabPage1.Controls.Add(this.PriceTextBox);
+            this.tabPage1.Controls.Add(this.NameTextBox);
             this.tabPage1.Controls.Add(this.ProductsListBox);
             this.tabPage1.Controls.Add(this.CategoriesComboBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -110,6 +116,27 @@
             this.DataGridView.Size = new System.Drawing.Size(628, 321);
             this.DataGridView.TabIndex = 0;
             // 
+            // NameTextBox
+            // 
+            this.NameTextBox.Location = new System.Drawing.Point(268, 34);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(192, 20);
+            this.NameTextBox.TabIndex = 2;
+            // 
+            // PriceTextBox
+            // 
+            this.PriceTextBox.Location = new System.Drawing.Point(268, 61);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(192, 20);
+            this.PriceTextBox.TabIndex = 3;
+            // 
+            // StockTextBox
+            // 
+            this.StockTextBox.Location = new System.Drawing.Point(268, 87);
+            this.StockTextBox.Name = "StockTextBox";
+            this.StockTextBox.Size = new System.Drawing.Size(192, 20);
+            this.StockTextBox.TabIndex = 4;
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +148,7 @@
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -137,6 +165,9 @@
         private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.ComboBox CategoriesComboBox;
         private System.Windows.Forms.ListBox ProductsListBox;
+        private System.Windows.Forms.TextBox StockTextBox;
+        private System.Windows.Forms.TextBox PriceTextBox;
+        private System.Windows.Forms.TextBox NameTextBox;
     }
 }
 

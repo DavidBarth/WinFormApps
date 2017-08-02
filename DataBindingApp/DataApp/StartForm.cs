@@ -25,13 +25,16 @@ namespace DataApp
 
         private void CategoriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int categoryId = Convert.ToInt16( CategoriesComboBox.SelectedValue); // value of CategoryID
-            ProductsListBox.DataSource = _objectSource.GetProducts(categoryId);
+            var categoryId = Convert.ToInt16( CategoriesComboBox.SelectedValue); // value of CategoryID
+            var products = _objectSource.GetProducts(categoryId);
+            ProductsListBox.DataSource = products;
             ProductsListBox.DisplayMember = "ProductName";
+
+            NameTextBox.DataBindings.Add("Text", products, "ProductName"); //control's property, datasource, dataMember
+            PriceTextBox.DataBindings.Add("Text", products, "UnitPrice");
+            StockTextBox.DataBindings.Add("Text", products, "UnitsInStock");
+
+
         }
-
-       
-
-       
     }
 }
