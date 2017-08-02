@@ -7,3 +7,4 @@ C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\bin\De
 C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\bin\Debug\DataApp.pdb
 C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\obj\Debug\DataApp.exe
 C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\obj\Debug\DataApp.pdb
+C:\DAVE\__PLURALSIGHT\WindowsForms\DaveWinformApps\DataBindingApp\DataApp\obj\Debug\DataApp.AddProductForm.resources

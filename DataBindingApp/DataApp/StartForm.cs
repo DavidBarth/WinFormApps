@@ -18,14 +18,15 @@ namespace DataApp
         {
             InitializeComponent();
 
-            CategoriesComboBox.DisplayMember = "CategoryName";
-            CategoriesComboBox.ValueMember = "CategoryID"; //gives back the id of the currently selected item
-            CategoriesComboBox.DataSource = _objectSource.GetCategories();
+            CategoriesToolStripComboBox.ComboBox.DisplayMember = "CategoryName";
+            CategoriesToolStripComboBox.ComboBox.ValueMember = "CategoryID"; //gives back the id of the currently selected item
+            CategoriesToolStripComboBox.ComboBox.DataSource = _objectSource.GetCategories();
         }
 
-        private void CategoriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void CategoriesToolStripComboBox_Click(object sender, EventArgs e)
         {
-            var categoryId = Convert.ToInt16( CategoriesComboBox.SelectedValue); // value of CategoryID
+            var categoryId = Convert.ToInt16(CategoriesToolStripComboBox.ComboBox.SelectedValue); // value of CategoryID
             var products = _objectSource.GetProducts(categoryId);
             ProductsListBox.DataSource = products;
             ProductsListBox.DisplayMember = "ProductName";
@@ -45,8 +46,12 @@ namespace DataApp
             OrderTextBox.DataBindings.Add("Text", products, "UnitsOnOrder");
             DiscontinuedCheckBox.DataBindings.Clear();
             DiscontinuedCheckBox.DataBindings.Add("Checked", products, "Discontinued");
-            
+        }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            AddProductForm addProductForm = new AddProductForm();
+            addProductForm.Show();
         }
     }
 }

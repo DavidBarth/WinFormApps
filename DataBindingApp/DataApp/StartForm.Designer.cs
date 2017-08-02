@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -44,9 +45,17 @@
             this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.ProductsListBox = new System.Windows.Forms.ListBox();
-            this.CategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.DataGridView = new System.Windows.Forms.DataGridView();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.CategoriesToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -55,6 +64,15 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.CategoriesToolStripComboBox,
+            this.toolStripLabel2,
+            this.toolStripComboBox1,
+            this.toolStripLabel3,
+            this.toolStripButton1,
+            this.toolStripLabel4,
+            this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(642, 25);
@@ -87,7 +105,6 @@
             this.tabPage1.Controls.Add(this.PriceTextBox);
             this.tabPage1.Controls.Add(this.NameTextBox);
             this.tabPage1.Controls.Add(this.ProductsListBox);
-            this.tabPage1.Controls.Add(this.CategoriesComboBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -202,16 +219,6 @@
             this.ProductsListBox.Size = new System.Drawing.Size(213, 225);
             this.ProductsListBox.TabIndex = 1;
             // 
-            // CategoriesComboBox
-            // 
-            this.CategoriesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CategoriesComboBox.FormattingEnabled = true;
-            this.CategoriesComboBox.Location = new System.Drawing.Point(9, 7);
-            this.CategoriesComboBox.Name = "CategoriesComboBox";
-            this.CategoriesComboBox.Size = new System.Drawing.Size(214, 21);
-            this.CategoriesComboBox.TabIndex = 0;
-            this.CategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoriesComboBox_SelectedIndexChanged);
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.DataGridView);
@@ -232,6 +239,60 @@
             this.DataGridView.Size = new System.Drawing.Size(628, 321);
             this.DataGridView.TabIndex = 0;
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(63, 22);
+            this.toolStripLabel1.Text = "Categories";
+            // 
+            // CategoriesToolStripComboBox
+            // 
+            this.CategoriesToolStripComboBox.Name = "CategoriesToolStripComboBox";
+            this.CategoriesToolStripComboBox.Size = new System.Drawing.Size(121, 25);
+            this.CategoriesToolStripComboBox.Click += new System.EventHandler(this.CategoriesToolStripComboBox_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel2.Text = "Source";
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(29, 22);
+            this.toolStripLabel3.Text = "Add";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(40, 22);
+            this.toolStripLabel4.Text = "Delete";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +302,8 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "StartForm";
             this.Text = "Form1";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -258,7 +321,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView DataGridView;
-        private System.Windows.Forms.ComboBox CategoriesComboBox;
         private System.Windows.Forms.ListBox ProductsListBox;
         private System.Windows.Forms.TextBox StockTextBox;
         private System.Windows.Forms.TextBox PriceTextBox;
@@ -272,6 +334,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripComboBox CategoriesToolStripComboBox;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }
 
