@@ -30,8 +30,11 @@ namespace DataApp
             ProductsListBox.DataSource = products;
             ProductsListBox.DisplayMember = "ProductName";
 
+            NameTextBox.DataBindings.Clear();
             NameTextBox.DataBindings.Add("Text", products, "ProductName"); //control's property, datasource, dataMember
+            PriceTextBox.DataBindings.Clear();
             PriceTextBox.DataBindings.Add("Text", products, "UnitPrice");
+            StockTextBox.DataBindings.Clear();
             StockTextBox.DataBindings.Add("Text", products, "UnitsInStock");
 
 
