@@ -30,6 +30,9 @@ namespace DataApp
             ProductsListBox.DataSource = products;
             ProductsListBox.DisplayMember = "ProductName";
 
+            DataGridView.DataSource = products;
+
+
             NameTextBox.DataBindings.Clear();
             NameTextBox.DataBindings.Add("Text", products, "ProductName"); //control's property, datasource, dataMember
             PriceTextBox.DataBindings.Clear();
