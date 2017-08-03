@@ -50,8 +50,16 @@ namespace DataApp
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            AddProductForm addProductForm = new AddProductForm();
-            addProductForm.Show();
+            var category = (Category)CategoriesToolStripComboBox.ComboBox.SelectedItem;
+            AddProductForm addProductForm = new AddProductForm(category);
+            var result =  addProductForm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                var product = addProductForm.Product;
+                _objectSource.AddProduct(product);
+                addProductForm.Close();
+            }
         }
     }
 }
