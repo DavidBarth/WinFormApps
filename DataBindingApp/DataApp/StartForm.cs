@@ -64,6 +64,16 @@ namespace DataApp
             DiscontinuedCheckBox.DataBindings.Add("Checked", products, "Discontinued");
         }
 
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Do you want to delete Product?");
+            if (result == DialogResult.OK)
+            {
+                var product = (Product)ProductsListBox.SelectedItem;
+                _objectSource.DeleteProduct(product);
+            }
+        }
+
        
     }
 }
