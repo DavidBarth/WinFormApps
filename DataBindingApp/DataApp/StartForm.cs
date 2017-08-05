@@ -17,20 +17,36 @@ namespace DataApp
         public StartForm()
         {
             InitializeComponent();
+        }
 
+        private void StartForm_Load(object sender, EventArgs e)
+        {
             CategoriesToolStripComboBox.ComboBox.DisplayMember = "CategoryName";
             CategoriesToolStripComboBox.ComboBox.ValueMember = "CategoryID"; //gives back the id of the currently selected item
-            CategoriesToolStripComboBox.ComboBox.DataSource = _objectSource.GetCategories();
+            CategoriesToolStripComboBox.ComboBox.DataSource = _objectSource.GetCategories();             
         }
 
 
-        private void CategoriesToolStripComboBox_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            var category = (Category)CategoriesToolStripComboBox.ComboBox.SelectedItem;
+            AddProductForm addProductForm = new AddProductForm(category);
+            var result =  addProductForm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                var product = addProductForm.Product;
+                _objectSource.AddProduct(product);
+                addProductForm.Close();
+            }
+        }
+
+        private void CategoriesToolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var categoryId = Convert.ToInt16(CategoriesToolStripComboBox.ComboBox.SelectedValue); // value of CategoryID
             var products = _objectSource.GetProducts(categoryId);
             ProductsListBox.DataSource = products;
             ProductsListBox.DisplayMember = "ProductName";
-
             DataGridView.DataSource = products;
 
 
@@ -48,18 +64,6 @@ namespace DataApp
             DiscontinuedCheckBox.DataBindings.Add("Checked", products, "Discontinued");
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            var category = (Category)CategoriesToolStripComboBox.ComboBox.SelectedItem;
-            AddProductForm addProductForm = new AddProductForm(category);
-            var result =  addProductForm.ShowDialog();
-
-            if (result == DialogResult.OK)
-            {
-                var product = addProductForm.Product;
-                _objectSource.AddProduct(product);
-                addProductForm.Close();
-            }
-        }
+       
     }
 }
