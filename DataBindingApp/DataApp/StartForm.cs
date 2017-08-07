@@ -13,6 +13,8 @@ namespace DataApp
     public partial class StartForm : Form
     {
         private ObjectSource _objectSource = new ObjectSource();
+        private BindingSource _categoriesBindingSource = new BindingSource();
+        private BindingSource _productBindingSource = new BindingSource();
 
         public StartForm()
         {
@@ -21,9 +23,21 @@ namespace DataApp
 
         private void StartForm_Load(object sender, EventArgs e)
         {
+            _categoriesBindingSource.DataSource = _objectSource.GetCategories();
             CategoriesToolStripComboBox.ComboBox.DisplayMember = "CategoryName";
             CategoriesToolStripComboBox.ComboBox.ValueMember = "CategoryID"; //gives back the id of the currently selected item
-            CategoriesToolStripComboBox.ComboBox.DataSource = _objectSource.GetCategories();             
+            CategoriesToolStripComboBox.ComboBox.DataSource = _categoriesBindingSource;
+
+            ProductsListBox.DataSource = _productBindingSource;
+            ProductsListBox.DisplayMember = "ProductName";
+            DataGridView.DataSource = _productBindingSource;
+
+            NameTextBox.DataBindings.Add("Text", _productBindingSource, "ProductName"); //control's property, datasource, dataMember
+            PriceTextBox.DataBindings.Add("Text", _productBindingSource, "UnitPrice");
+            StockTextBox.DataBindings.Add("Text", _productBindingSource, "UnitsInStock");
+            QuantityTextBox.DataBindings.Add("Text", _productBindingSource, "QuantityPerUnit");
+            OrderTextBox.DataBindings.Add("Text", _productBindingSource, "UnitsOnOrder");
+            DiscontinuedCheckBox.DataBindings.Add("Checked", _productBindingSource, "Discontinued");
         }
 
 
@@ -44,24 +58,9 @@ namespace DataApp
         private void CategoriesToolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var categoryId = Convert.ToInt16(CategoriesToolStripComboBox.ComboBox.SelectedValue); // value of CategoryID
-            var products = _objectSource.GetProducts(categoryId);
-            ProductsListBox.DataSource = products;
-            ProductsListBox.DisplayMember = "ProductName";
-            DataGridView.DataSource = products;
-
-
-            NameTextBox.DataBindings.Clear();
-            NameTextBox.DataBindings.Add("Text", products, "ProductName"); //control's property, datasource, dataMember
-            PriceTextBox.DataBindings.Clear();
-            PriceTextBox.DataBindings.Add("Text", products, "UnitPrice");
-            StockTextBox.DataBindings.Clear();
-            StockTextBox.DataBindings.Add("Text", products, "UnitsInStock");
-            QuantityTextBox.DataBindings.Clear();
-            QuantityTextBox.DataBindings.Add("Text", products, "QuantityPerUnit");
-            OrderTextBox.DataBindings.Clear();
-            OrderTextBox.DataBindings.Add("Text", products, "UnitsOnOrder");
-            DiscontinuedCheckBox.DataBindings.Clear();
-            DiscontinuedCheckBox.DataBindings.Add("Checked", products, "Discontinued");
+            _productBindingSource.DataSource = _objectSource.GetProducts(categoryId);
+            
+           
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
