@@ -50,7 +50,7 @@ namespace DataApp
             if (result == DialogResult.OK)
             {
                 var product = addProductForm.Product;
-                _objectSource.AddProduct(product);
+                _productBindingSource.Add(product);
                 addProductForm.Close();
             }
         }
@@ -69,7 +69,7 @@ namespace DataApp
             if (result == DialogResult.OK)
             {
                 var product = (Product)ProductsListBox.SelectedItem;
-                _objectSource.DeleteProduct(product);
+                _productBindingSource.Remove(product);
             }
         }
 
