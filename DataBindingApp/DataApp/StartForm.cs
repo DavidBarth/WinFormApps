@@ -16,6 +16,8 @@ namespace DataApp
         private BindingSource _categoriesBindingSource = new BindingSource();
         private BindingSource _productBindingSource = new BindingSource();
 
+        private ISource _currentSource;
+
         public StartForm()
         {
             InitializeComponent();
@@ -23,7 +25,12 @@ namespace DataApp
 
         private void StartForm_Load(object sender, EventArgs e)
         {
-            _categoriesBindingSource.DataSource = _objectSource.GetCategories();
+            SourceToolStripComboBox.SelectedIndex = 0; //defaulted to Object
+
+           // SetSource();
+            BindCategories();
+
+            
             CategoriesToolStripComboBox.ComboBox.DisplayMember = "CategoryName";
             CategoriesToolStripComboBox.ComboBox.ValueMember = "CategoryID"; //gives back the id of the currently selected item
             CategoriesToolStripComboBox.ComboBox.DataSource = _categoriesBindingSource;
@@ -40,8 +47,10 @@ namespace DataApp
             DiscontinuedCheckBox.DataBindings.Add("Checked", _productBindingSource, "Discontinued");
         }
 
+       
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+
+        private void AddButton_Click(object sender, EventArgs e)
         {
             var category = (Category)CategoriesToolStripComboBox.ComboBox.SelectedItem;
             AddProductForm addProductForm = new AddProductForm(category);
@@ -57,13 +66,11 @@ namespace DataApp
 
         private void CategoriesToolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var categoryId = Convert.ToInt16(CategoriesToolStripComboBox.ComboBox.SelectedValue); // value of CategoryID
-            _productBindingSource.DataSource = _objectSource.GetProducts(categoryId);
             
-           
+            BindProducts();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Do you want to delete Product?");
             if (result == DialogResult.OK)
@@ -71,6 +78,42 @@ namespace DataApp
                 var product = (Product)ProductsListBox.SelectedItem;
                 _productBindingSource.Remove(product);
             }
+        }
+
+        private void SourceToolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetSource();
+            BindCategories();
+            BindProducts();
+        }
+
+
+        private void BindCategories()
+        {
+            _categoriesBindingSource.DataSource = _currentSource.GetCategories();
+        }
+
+        private void SetSource()
+        {
+            switch (SourceToolStripComboBox.SelectedIndex)
+            {
+                case 1:
+                    if(_objectSource == null){
+                        _objectSource = new ObjectSource();
+                    }
+
+                    break;
+
+                default:
+                    _currentSource = _objectSource;
+                    break;
+            }
+        }
+
+        private void BindProducts()
+        {
+            var categoryId = Convert.ToInt16(CategoriesToolStripComboBox.ComboBox.SelectedValue); // value of CategoryID
+            _productBindingSource.DataSource = _currentSource.GetProducts(categoryId);
         }
 
        

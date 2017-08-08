@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DataApp
 {
-    public class ObjectSource
+    public class ObjectSource :ISource
     {
         private List<Category> _categories;
         private List<Product> _products;
@@ -117,14 +118,19 @@ namespace DataApp
             return result.ToList();
         }
 
-        public void DeleteProduct(Product product)
+        public void DeleteProduct(BindingSource source, Product product)
         {
-            _products.Remove(product);
+            source.Remove(product);
         }
 
-        public void AddProduct(Product product)
+        public void AddProduct(BindingSource source, Product product)
         {
-            _products.Add(product);
+            source.Add(product);
+        }
+
+        public void Save()
+        {
+            //do something
         }
 
     }

@@ -33,7 +33,7 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.CategoriesToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.SourceToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
@@ -68,7 +68,7 @@
             this.toolStripLabel1,
             this.CategoriesToolStripComboBox,
             this.toolStripLabel2,
-            this.toolStripComboBox1,
+            this.SourceToolStripComboBox,
             this.toolStripLabel3,
             this.toolStripButton1,
             this.toolStripLabel4,
@@ -97,10 +97,13 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(43, 22);
             this.toolStripLabel2.Text = "Source";
             // 
-            // toolStripComboBox1
+            // SourceToolStripComboBox
             // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            this.SourceToolStripComboBox.Items.AddRange(new object[] {
+            "Objects"});
+            this.SourceToolStripComboBox.Name = "SourceToolStripComboBox";
+            this.SourceToolStripComboBox.Size = new System.Drawing.Size(121, 25);
+            this.SourceToolStripComboBox.SelectedIndexChanged += new System.EventHandler(this.SourceToolStripComboBox_SelectedIndexChanged);
             // 
             // toolStripLabel3
             // 
@@ -116,7 +119,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripAddButton";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // toolStripLabel4
             // 
@@ -132,7 +135,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton2.Text = "toolStripDeleteButton";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.toolStripButton2.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // tabControl1
             // 
@@ -339,7 +342,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripComboBox CategoriesToolStripComboBox;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripComboBox SourceToolStripComboBox;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
